@@ -649,39 +649,95 @@
         .srv-grid{grid-template-columns:repeat(2,1fr);}
         .parts-hero-inner{grid-template-columns:1fr;gap:36px;}
         .parts-cats-grid{grid-template-columns:repeat(2,1fr);}
-        .info-bar-item{font-size:0.6rem; letter-spacing:0.07em;}
       }
+
+      /* Tablet: hero goes 1 col, photos become a row below */
       @media(max-width:820px) {
-        .hero{grid-template-columns:1fr;}
-        .hero-right{display:none;}
-        .hero-left{padding:60px 28px 52px max(28px, calc((100vw - 1120px)/2 + 28px));}
+        .hero{ grid-template-columns:1fr; padding-top:108px; }
+        .hero-left{ padding:48px 28px 24px; }
+        .hero-right{
+          display:block;
+          padding:0 0 44px;
+        }
+        .hero-img-grid{
+          display:flex;
+          grid-template-columns:unset;
+          grid-template-rows:unset;
+          gap:6px;
+          overflow-x:auto;
+          scroll-snap-type:x mandatory;
+          -webkit-overflow-scrolling:touch;
+          padding:0 28px 6px;
+          scrollbar-width:none;
+        }
+        .hero-img-grid::-webkit-scrollbar{display:none;}
+        .hero-img-card{
+          flex:0 0 66vw; max-width:300px;
+          aspect-ratio:4/3 !important;
+          grid-column:unset !important;
+          scroll-snap-align:start;
+        }
       }
+
       @media(max-width:768px) {
         .nav-links,.nav-cta{display:none;} .burger{display:flex;}
-        .info-bar{display:none;}
-        .hero{padding-top:66px;}
-        .hero-left{padding:40px 24px 44px; max-width:100%;}
-        .hero h1{font-size:clamp(48px,12vw,72px);}
-        .hero-sub{font-size:0.88rem;}
-        .hero-cta{flex-direction:column; gap:10px;}
-        .hero-cta .btn{width:100%;justify-content:center;clip-path:none;padding:15px 24px;}
-        section{padding:60px 0;} .sec-head{margin-bottom:36px;}
-        .srv-grid{grid-template-columns:1fr 1fr;} .tires-grid{grid-template-columns:1fr;}
-        .map-wrap{grid-template-columns:1fr;} .map-info{padding:28px 24px;border-right:none;border-bottom:2px solid var(--border2);}
-        .map-frame{height:280px;} .footer-grid{grid-template-columns:1fr 1fr;gap:24px;}
-        .foot-brand{grid-column:1/-1;} .carousel-slide{flex:0 0 calc(50% - 1px);}
+
+        /* info-bar: marquee ticker on mobile */
+        .info-bar{ top:66px; overflow:hidden; }
+        .info-bar-inner{
+          padding:0; gap:0; width:max-content;
+          animation:marquee 20s linear infinite;
+        }
+        .info-bar-item{ padding:8px 22px; font-size:0.7rem; flex-shrink:0; }
+        .info-bar-item + .info-bar-item{ padding-left:22px; }
+
+        .hero{ padding-top:100px; grid-template-columns:1fr; }
+        .hero-left{ padding:32px 20px 20px; }
+        .hero h1{ font-size:clamp(44px,11vw,68px); }
+        .hero-sub{ font-size:0.87rem; max-width:100%; }
+        .hero-cta{ flex-direction:column; gap:10px; }
+        .hero-cta .btn{ width:100%; justify-content:center; clip-path:none; padding:15px 20px; }
+        .hero-right{ display:block; padding:0 0 36px; }
+        .hero-img-grid{
+          display:flex; grid-template-columns:unset; grid-template-rows:unset;
+          gap:6px; overflow-x:auto; scroll-snap-type:x mandatory;
+          -webkit-overflow-scrolling:touch; padding:0 20px 6px; scrollbar-width:none;
+        }
+        .hero-img-grid::-webkit-scrollbar{display:none;}
+        .hero-img-card{
+          flex:0 0 72vw; max-width:280px;
+          aspect-ratio:4/3 !important; grid-column:unset !important;
+          scroll-snap-align:start;
+        }
+
+        section{padding:56px 0;} .sec-head{margin-bottom:32px;}
+        .srv-grid{grid-template-columns:1fr 1fr;}
+        .tires-grid{grid-template-columns:1fr;}
+        .map-wrap{grid-template-columns:1fr;}
+        .map-info{padding:24px 20px;border-right:none;border-bottom:2px solid var(--border2);}
+        .map-frame{height:260px;}
+        .footer-grid{grid-template-columns:1fr 1fr;gap:24px;}
+        .foot-brand{grid-column:1/-1;}
+        .carousel-slide{flex:0 0 calc(50% - 1px);}
         .lb-arrow{display:none;} .lb-img-wrap{padding:0 16px;}
-        .contact-box{padding:36px 24px;}
+        .contact-box{padding:36px 20px;}
+        .ya-btn{clip-path:none; align-self:stretch; justify-content:center;}
       }
+
       @media(max-width:480px) {
-        .srv-grid{grid-template-columns:1fr;} .footer-grid{grid-template-columns:1fr;}
-        .sec-title,.ya-title,.parts-hero-title{font-size:clamp(36px,10vw,54px);}
-        .carousel-slide{flex:0 0 100%;} .map-frame{height:220px;}
-        .parts-cats-grid{grid-template-columns:1fr;} .tire-banner{padding:20px;}
-        .hero-left{padding:32px 20px 36px;}
-        .hero h1{font-size:clamp(44px,11vw,64px);}
-        .hero-tags{gap:6px;}
-        .hero-tag-chip{font-size:0.68rem; padding:4px 10px;}
+        .srv-grid{grid-template-columns:1fr;}
+        .footer-grid{grid-template-columns:1fr;}
+        .sec-title,.ya-title,.parts-hero-title{font-size:clamp(34px,10vw,52px);}
+        .carousel-slide{flex:0 0 100%;}
+        .map-frame{height:210px;}
+        .parts-cats-grid{grid-template-columns:1fr;}
+        .tire-banner{padding:18px 16px; flex-direction:column; align-items:flex-start;}
+        .hero-left{padding:28px 16px 16px;}
+        .hero h1{font-size:clamp(40px,10vw,58px);}
+        .hero-tags{gap:5px;}
+        .hero-tag-chip{font-size:0.64rem; padding:4px 9px;}
+        .info-bar-item{font-size:0.68rem; padding:7px 16px;}
+        .hero-img-card{flex:0 0 80vw; max-width:260px;}
       }
     </style>
   </head>
@@ -706,6 +762,10 @@
     <!-- INFO BAR -->
     <div class="info-bar">
       <div class="info-bar-inner">
+        <div class="info-bar-item">Ремонт любой сложности</div>
+        <div class="info-bar-item">Автоэлектрика</div>
+        <div class="info-bar-item">Ремонт легковой и грузовой техники</div>
+        <div class="info-bar-item">Ремонт топливной аппаратуры</div>
         <div class="info-bar-item">Ремонт любой сложности</div>
         <div class="info-bar-item">Автоэлектрика</div>
         <div class="info-bar-item">Ремонт легковой и грузовой техники</div>
