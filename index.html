@@ -55,10 +55,44 @@
       @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
       @keyframes slideIn { from{opacity:0;transform:translateX(-20px);} to{opacity:1;transform:none;} }
 
+      /* ── INFO BAR ── */
+      .info-bar {
+        background: var(--black);
+        padding: 0;
+        position: fixed;
+        top: 66px; left:0; right:0;
+        z-index: 190;
+        border-bottom: 1px solid rgba(245,200,0,0.2);
+      }
+      .info-bar-inner {
+        max-width:1120px; margin:0 auto; padding:0 28px;
+        display:flex; align-items:center; gap:0;
+        overflow:hidden;
+      }
+      .info-bar-item {
+        display:flex; align-items:center; gap:8px;
+        padding:9px 20px 9px 0;
+        font-size:0.72rem; font-weight:500; letter-spacing:0.04em;
+        color:rgba(255,255,255,0.75);
+        white-space:nowrap;
+        position:relative;
+      }
+      .info-bar-item + .info-bar-item {
+        padding-left:20px;
+        border-left:1px solid rgba(255,255,255,0.1);
+      }
+      .info-bar-item::before {
+        content:"";
+        width:5px; height:5px;
+        border-radius:50%;
+        background:var(--y);
+        flex-shrink:0;
+      }
+
       /* ── NAV ── */
       nav {
         position: fixed; top:0; left:0; right:0; z-index:200;
-        background: rgba(250,250,247,0.95);
+        background: rgba(250,250,247,0.97);
         backdrop-filter: blur(14px);
         border-bottom: 2px solid var(--y);
         animation: fadeIn 0.4s ease both;
@@ -118,23 +152,99 @@
       }
       .mob-menu a:hover { color:var(--black); background:rgba(245,200,0,0.08); }
 
+      /* ── INFO BAR ── */
+      .info-bar {
+        position: fixed;
+        top: 66px;
+        left: 0; right: 0;
+        z-index: 190;
+        background: var(--black);
+        border-bottom: 2px solid var(--y);
+      }
+      .info-bar-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 28px;
+        display: flex;
+        align-items: center;
+        gap: 0;
+      }
+      .info-bar-item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.85);
+        padding: 10px 16px 10px 0;
+        white-space: nowrap;
+      }
+      .info-bar-item::before {
+        content: "";
+        width: 6px; height: 6px;
+        background: var(--y);
+        flex-shrink: 0;
+        transform: rotate(45deg);
+      }
+      .info-bar-item + .info-bar-item {
+        padding-left: 16px;
+        border-left: 1px solid rgba(255,255,255,0.1);
+      }
+
       /* ── HERO ── */
       .hero {
         min-height: 100vh;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
-        padding-top: 66px;
+        padding-top: 108px;
         position: relative;
         overflow: hidden;
         background: var(--bg);
       }
       .hero::after { display: none; }
       .hero-left {
-        padding: 80px 28px 80px max(28px, calc((100vw - 1120px)/2 + 28px));
+        padding: 60px 40px 60px max(28px, calc((100vw - 1120px)/2 + 28px));
         display:flex; flex-direction:column;
         animation: up 0.6s 0.1s ease both;
-        max-width: 760px;
+      }
+      .hero-right {
+        display:flex; align-items:center; justify-content:center;
+        height:100%; padding:40px 40px 40px 20px;
+        animation: up 0.6s 0.3s ease both;
+      }
+      .hero-img-grid {
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        gap:8px;
+        width:100%;
+        max-width:460px;
+      }
+      .hero-img-card {
+        position:relative; overflow:hidden;
+        aspect-ratio:4/3;
+        background:var(--border);
+      }
+      .hero-img-card:first-child {
+        grid-column:1/-1;
+        aspect-ratio:16/7;
+      }
+      .hero-img-card img {
+        width:100%; height:100%; object-fit:cover; display:block;
+        transition:transform 0.5s ease;
+        filter:brightness(0.9);
+      }
+      .hero-img-card:hover img { transform:scale(1.04); }
+      .hero-img-label {
+        position:absolute; bottom:0; left:0; right:0;
+        background:linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+        padding:10px 12px 8px;
+        font-size:0.65rem; font-weight:600; letter-spacing:0.12em;
+        text-transform:uppercase; color:rgba(255,255,255,0.9);
       }
       .hero-tag {
         display:inline-flex; align-items:center; gap:8px;
@@ -176,8 +286,6 @@
         clip-path:polygon(0 0,calc(100% - 10px) 0,100% 100%,10px 100%);
       }
       .btn-g:hover { background:var(--black); color:var(--y); }
-
-      .hero-right { display:none; }
 
       /* ── TICKER ── */
       .ticker {
@@ -537,11 +645,21 @@
       .hero-tag-chip:hover { border-color:var(--y); color:var(--black); }
 
       /* ── MOBILE ── */
-      @media(max-width:960px) { .srv-grid{grid-template-columns:repeat(2,1fr);} .parts-hero-inner{grid-template-columns:1fr;gap:36px;} .parts-cats-grid{grid-template-columns:repeat(2,1fr);} }
+      @media(max-width:960px) {
+        .srv-grid{grid-template-columns:repeat(2,1fr);}
+        .parts-hero-inner{grid-template-columns:1fr;gap:36px;}
+        .parts-cats-grid{grid-template-columns:repeat(2,1fr);}
+        .info-bar-item{font-size:0.6rem; letter-spacing:0.07em;}
+      }
+      @media(max-width:820px) {
+        .hero{grid-template-columns:1fr;}
+        .hero-right{display:none;}
+        .hero-left{padding:60px 28px 52px max(28px, calc((100vw - 1120px)/2 + 28px));}
+      }
       @media(max-width:768px) {
         .nav-links,.nav-cta{display:none;} .burger{display:flex;}
-        .hero{grid-template-columns:1fr; min-height:auto; padding-bottom:0;}
-        .hero-right{display:none;} .hero::after{display:none;}
+        .info-bar{display:none;}
+        .hero{padding-top:66px;}
         .hero-left{padding:40px 24px 44px; max-width:100%;}
         .hero h1{font-size:clamp(48px,12vw,72px);}
         .hero-sub{font-size:0.88rem;}
@@ -570,7 +688,7 @@
   <body>
     <nav>
       <div class="nav-inner">
-        <a class="logo" href="#"><span class="logo-ast">АвтоСпецТехника</span>Машинери</a>
+        <a class="logo" href="#">АвтоСпец<span class="logo-ast">Техника</span>Машинери</a>
         <div class="nav-links">
           <a href="#parts-hero">Запчасти</a>
           <a href="#services">Услуги и цены</a>
@@ -584,6 +702,16 @@
         </button>
       </div>
     </nav>
+
+    <!-- INFO BAR -->
+    <div class="info-bar">
+      <div class="info-bar-inner">
+        <div class="info-bar-item">Ремонт любой сложности</div>
+        <div class="info-bar-item">Автоэлектрика</div>
+        <div class="info-bar-item">Ремонт легковой и грузовой техники</div>
+        <div class="info-bar-item">Ремонт топливной аппаратуры</div>
+      </div>
+    </div>
 
     <div class="mob-menu" id="mob-menu">
       <a href="#parts-hero" onclick="closeMenu()">Запчасти</a>
@@ -616,10 +744,27 @@
         </div>
       </div>
       <div class="hero-right">
-        <div class="hero-deco">
-          <div class="hero-deco-line">ЗАПЧАСТИ</div>
-          <div class="hero-deco-line filled">РЕМОНТ</div>
-          <div class="hero-deco-line">СЕРВИС</div>
+        <div class="hero-img-grid">
+          <!-- Slot 1: wide — use photo if exists, else gradient placeholder -->
+          <div class="hero-img-card" style="grid-column:1/-1; aspect-ratio:16/7; background:linear-gradient(135deg,#e8e4d8 0%,#d4cfc0 100%); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="main_1.jpg" alt="Спецтехника" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+            <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:90%;opacity:0.18;pointer-events:none">
+             
+            </svg>
+            <div class="hero-img-label">Спецтехника и грузовые авто</div>
+          </div>
+          <!-- Slot 2 -->
+          <div class="hero-img-card" style="background:linear-gradient(135deg,#f0ede4 0%,#e0ddd4 100%); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="main_2.webp" alt="Ремонт двигателя" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+            
+            <div class="hero-img-label">Ремонт двигателей</div>
+          </div>
+          <!-- Slot 3 -->
+          <div class="hero-img-card" style="background:linear-gradient(135deg,#ede9e0 0%,#ddd9d0 100%); display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img src="main_3.webp" alt="Грузовики" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
+            
+            <div class="hero-img-label">Грузовики</div>
+          </div>
         </div>
       </div>
     </section>
