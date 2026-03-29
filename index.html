@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>АвтоСпецТехникаМашинери — Запчасти, Ремонт спецтехники, грузовых и легковых авто.</title>
+    <title>Ремонт спецтехники, грузовых и легковых авто в Рязани | АвтоСпецТехникаМашинери</title>
     <meta name="description" content="АвтоСпецТехникаМашинери — запчасти и ремонт спецтехники CAT, John Deere, КАМАЗ. Ремонт двигателей, трансмиссии, ходовой, кондиционеров. Рязанская область, Рыбновский р-н, д. Баграмово." />
     <meta name="keywords" content="АвтоСпецТехникаМашинери, запчасти спецтехника, ремонт Caterpillar, ремонт John Deere, ремонт КАМАЗ, запчасти Рязань, ремонт двигателей, ремонт АКПП" />
     <meta property="og:title" content="АвтоСпецТехникаМашинери — Запчасти и ремонт спецтехники" />
@@ -31,6 +31,7 @@
         --white: #ffffff;
       }
       * { margin: 0; padding: 0; box-sizing: border-box; }
+      h1, h2, h3, h4, h5, h6 { font-weight: inherit; font-size: inherit; }
       html { scroll-behavior: smooth; }
       html, body { overflow-x: hidden; width: 100%; max-width: 100%; }
       body {
@@ -151,6 +152,7 @@
         box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       }
       .mob-menu.open { display:flex; }
+      .mob-menu a {
         padding:13px 28px; font-size:0.88rem; letter-spacing:0.06em;
         text-transform:uppercase; color:var(--muted); transition:color 0.2s; font-weight:500;
       }
@@ -756,36 +758,39 @@
     </style>
   </head>
   <body>
-    <nav>
-      <div class="nav-inner">
-        <a class="logo" href="#">АвтоСпец<span class="logo-ast">Техника</span>Машинери</a>
-        <div class="nav-links">
-          <a href="#parts-hero">Запчасти</a>
-          <a href="#services">Услуги и цены</a>
-          <a href="#tires">Шины</a>
-          <a href="#gallery">Фото</a>
-          <a href="#map-section">Как добраться</a>
-          <a href="#contact" class="nav-cta">Написать нам</a>
-        </div>
-        <button class="burger" id="burger" aria-label="Меню">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
 
-    <!-- INFO BAR -->
-    <div class="info-bar">
-      <div class="info-bar-inner">
-        <div class="info-bar-item">Ремонт любой сложности</div>
-        <div class="info-bar-item">Автоэлектрика</div>
-        <div class="info-bar-item">Ремонт легковой и грузовой техники</div>
-        <div class="info-bar-item">Ремонт топливной аппаратуры</div>
-        <div class="info-bar-item">Ремонт любой сложности</div>
-        <div class="info-bar-item">Автоэлектрика</div>
-        <div class="info-bar-item">Ремонт легковой и грузовой техники</div>
-        <div class="info-bar-item">Ремонт топливной аппаратуры</div>
+    <header>
+      <nav aria-label="Основная навигация">
+        <div class="nav-inner">
+          <a class="logo" href="#">АвтоСпец<span class="logo-ast">Техника</span>Машинери</a>
+          <div class="nav-links">
+            <a href="#parts-hero">Запчасти</a>
+            <a href="#services">Услуги и цены</a>
+            <a href="#tires">Шины</a>
+            <a href="#gallery">Фото</a>
+            <a href="#map-section">Как добраться</a>
+            <a href="#contact" class="nav-cta">Написать нам</a>
+          </div>
+          <button class="burger" id="burger" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- INFO BAR -->
+      <div class="info-bar" aria-label="Краткий список услуг">
+        <div class="info-bar-inner">
+          <div class="info-bar-item">Ремонт любой сложности</div>
+          <div class="info-bar-item">Автоэлектрика</div>
+          <div class="info-bar-item">Ремонт легковой и грузовой техники</div>
+          <div class="info-bar-item">Ремонт топливной аппаратуры</div>
+          <div class="info-bar-item">Ремонт любой сложности</div>
+          <div class="info-bar-item">Автоэлектрика</div>
+          <div class="info-bar-item">Ремонт легковой и грузовой техники</div>
+          <div class="info-bar-item">Ремонт топливной аппаратуры</div>
+        </div>
       </div>
-    </div>
+    </header>
 
     <div class="mob-menu" id="mob-menu">
       <a href="#parts-hero" onclick="closeMenu()">Запчасти</a>
@@ -797,12 +802,12 @@
     </div>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-label="Главная">
       <div class="hero-left">
         <div class="hero-tag">Рязанская обл. · Баграмово</div>
         <h1>Запчасти<em>и ремонт<br />спецтехники</em></h1>
         <p class="hero-sub">
-          Подбор и доставка запчастей для спецтехники и грузовых авто. Ремонт любой сложности — CAT, John Deere, КАМАЗ и другие
+          Подбор и доставка <strong>запчастей для спецтехники</strong> и <strong>грузовых авто</strong>. <strong>Ремонт</strong> любой сложности — <strong>CAT</strong>, <strong>John Deere</strong>, <strong>КАМАЗ</strong> и другие
         </p>
         <div class="hero-tags">
           <span class="hero-tag-chip">Caterpillar</span>
@@ -819,24 +824,16 @@
       </div>
       <div class="hero-right">
         <div class="hero-img-grid">
-          <!-- Slot 1: wide — use photo if exists, else gradient placeholder -->
           <div class="hero-img-card" style="grid-column:1/-1; aspect-ratio:16/7; background:linear-gradient(135deg,#e8e4d8 0%,#d4cfc0 100%); display:flex; align-items:center; justify-content:center; overflow:hidden;">
-            <img src="main_1.jpg" alt="Спецтехника" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-            <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:90%;opacity:0.18;pointer-events:none">
-             
-            </svg>
+            <img src="main_1.jpg" alt="Ремонт спецтехники Caterpillar и John Deere в Рязани" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
             <div class="hero-img-label">Спецтехника и грузовые авто</div>
           </div>
-          <!-- Slot 2 -->
           <div class="hero-img-card" style="background:linear-gradient(135deg,#f0ede4 0%,#e0ddd4 100%); display:flex; align-items:center; justify-content:center; overflow:hidden;">
-            <img src="main_2.webp" alt="Ремонт двигателя" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-            
+            <img src="main_2.webp" alt="Капитальный ремонт двигателя КАМАЗ и спецтехники" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
             <div class="hero-img-label">Ремонт двигателей</div>
           </div>
-          <!-- Slot 3 -->
           <div class="hero-img-card" style="background:linear-gradient(135deg,#ede9e0 0%,#ddd9d0 100%); display:flex; align-items:center; justify-content:center; overflow:hidden;">
-            <img src="main_3.webp" alt="Грузовики" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
-            
+            <img src="main_3.webp" alt="Ремонт грузовых автомобилей в Рязанской области" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.style.display='none'" />
             <div class="hero-img-label">Грузовики</div>
           </div>
         </div>
@@ -844,7 +841,7 @@
     </section>
 
     <!-- TICKER -->
-    <div class="ticker">
+    <div class="ticker" aria-hidden="true">
       <div class="ticker-track">
         <span class="ticker-item">Запчасти Caterpillar<span class="ticker-dot"></span></span>
         <span class="ticker-item">Запчасти John Deere<span class="ticker-dot"></span></span>
@@ -875,11 +872,11 @@
         <div class="parts-hero-inner">
           <div class="parts-hero-left r">
             <div class="parts-hero-eyebrow">Оригинал и аналоги</div>
-            <div class="parts-hero-title">
+            <h2 class="parts-hero-title">
               Запасные<br /><span class="out">части</span>
-            </div>
+            </h2>
             <p class="parts-hero-desc">
-              Подбор и доставка запчастей под любую спецтехнику и грузовые автомобили. Оригинальные и качественные аналоги. Работаем быстро — позвоните или напишите, подберём нужную деталь.
+              Подбор и доставка <strong>запчастей</strong> под любую <strong>спецтехнику</strong> и <strong>грузовые автомобили</strong>. Оригинальные и качественные аналоги. Работаем быстро — позвоните или напишите, подберём нужную деталь.
             </p>
             <div class="brands-row">
               <span class="brand-pill">Caterpillar</span>
@@ -894,28 +891,28 @@
           </div>
           <div class="parts-cats-grid r">
             <div class="parts-cat-card">
-              <div class="pcc-title">Двигатель и топливная система</div>
-              <div class="pcc-desc">Поршни, кольца, вкладыши, форсунки, ТНВД, фильтры</div>
+              <h3 class="pcc-title">Двигатель и топливная система</h3>
+              <p class="pcc-desc">Поршни, кольца, вкладыши, форсунки, ТНВД, фильтры</p>
             </div>
             <div class="parts-cat-card">
-              <div class="pcc-title">Трансмиссия</div>
-              <div class="pcc-desc">Запчасти для АКПП, механических КПП, муфты, подшипники</div>
+              <h3 class="pcc-title">Трансмиссия</h3>
+              <p class="pcc-desc">Запчасти для АКПП, механических КПП, муфты, подшипники</p>
             </div>
             <div class="parts-cat-card">
-              <div class="pcc-title">Гидравлика</div>
-              <div class="pcc-desc">Гидроцилиндры, насосы, рукава высокого давления, уплотнения</div>
+              <h3 class="pcc-title">Гидравлика</h3>
+              <p class="pcc-desc">Гидроцилиндры, насосы, рукава высокого давления, уплотнения</p>
             </div>
             <div class="parts-cat-card">
-              <div class="pcc-title">Ходовая и рулевое</div>
-              <div class="pcc-desc">Амортизаторы, рулевые рейки, шаровые, ступичные подшипники</div>
+              <h3 class="pcc-title">Ходовая и рулевое</h3>
+              <p class="pcc-desc">Амортизаторы, рулевые рейки, шаровые, ступичные подшипники</p>
             </div>
             <div class="parts-cat-card">
-              <div class="pcc-title">Система охлаждения</div>
-              <div class="pcc-desc">Радиаторы, термостаты, водяные помпы, патрубки</div>
+              <h3 class="pcc-title">Система охлаждения</h3>
+              <p class="pcc-desc">Радиаторы, термостаты, водяные помпы, патрубки</p>
             </div>
             <div class="parts-cat-card">
-              <div class="pcc-title">Электрика</div>
-              <div class="pcc-desc">Стартеры, генераторы, реле, датчики, проводка</div>
+              <h3 class="pcc-title">Электрика</h3>
+              <p class="pcc-desc">Стартеры, генераторы, реле, датчики, проводка</p>
             </div>
           </div>
         </div>
@@ -931,18 +928,18 @@
       <div class="wrap">
         <div class="sec-head r">
           <div class="sec-eyebrow">Что мы делаем</div>
-          <div class="sec-title">Услуги<br /><span class="out">сервиса</span></div>
+          <h2 class="sec-title">Услуги<br /><span class="out">сервиса</span></h2>
           <p class="sec-sub">Полный спектр работ — от диагностики до капитального ремонта спецтехники и автомобилей</p>
         </div>
         <div class="srv-grid">
-          <div class="srv-card"><div class="srv-num">01</div><h3>Диагностика электросистем</h3><p>Компьютерная диагностика, ремонт проводки, устранение ошибок ЭБУ</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
-          <div class="srv-card"><div class="srv-num">02</div><h3>Замена масла</h3><p>Замена масла и технических жидкостей для любой техники</p><div class="srv-price">от 1 ₽ <span class="srv-price-note">/ шт</span></div></div>
-          <div class="srv-card"><div class="srv-num">03</div><h3>Капитальный ремонт ДВС</h3><p>Полный капремонт двигателей легковых, грузовых и спецтехники</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
-          <div class="srv-card"><div class="srv-num">04</div><h3>Пескоструйная очистка</h3><p>Очистка деталей и запчастей автомобилей в собственной камере</p><div class="srv-price">от 100 ₽</div></div>
-          <div class="srv-card"><div class="srv-num">05</div><h3>Ремонт кондиционеров</h3><p>Заправка кондиционеров, ремонт рефрижераторных установок</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
-          <div class="srv-card"><div class="srv-num">06</div><h3>Ремонт спецтехники</h3><p>Обслуживание и ремонт CAT, John Deere, экскаваторов, погрузчиков</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
-          <div class="srv-card"><div class="srv-num">07</div><h3>Ремонт трансмиссии</h3><p>Ремонт АКПП и механических КПП всех марок</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
-          <div class="srv-card"><div class="srv-num">08</div><h3>Ремонт ходовой</h3><p>Ремонт подвески: амортизаторы, рулевые, подшипники</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
+          <div class="srv-card"><div class="srv-num">01</div><h3>Диагностика электросистем</h3><p>Компьютерная <strong>диагностика</strong>, ремонт проводки, устранение ошибок ЭБУ</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
+          <div class="srv-card"><div class="srv-num">02</div><h3>Замена масла</h3><p><strong>Замена масла</strong> и технических жидкостей для любой техники</p><div class="srv-price">от 1 ₽ <span class="srv-price-note">/ шт</span></div></div>
+          <div class="srv-card"><div class="srv-num">03</div><h3>Капитальный ремонт ДВС</h3><p>Полный <strong>капремонт двигателей</strong> легковых, грузовых и спецтехники</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
+          <div class="srv-card"><div class="srv-num">04</div><h3>Пескоструйная очистка</h3><p><em>Пескоструйная очистка</em> деталей и запчастей автомобилей в собственной камере</p><div class="srv-price">от 100 ₽</div></div>
+          <div class="srv-card"><div class="srv-num">05</div><h3>Ремонт кондиционеров</h3><p>Заправка <strong>кондиционеров</strong>, ремонт рефрижераторных установок</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
+          <div class="srv-card"><div class="srv-num">06</div><h3>Ремонт спецтехники</h3><p>Обслуживание и <strong>ремонт CAT</strong>, John Deere, экскаваторов, погрузчиков</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
+          <div class="srv-card"><div class="srv-num">07</div><h3>Ремонт трансмиссии</h3><p><strong>Ремонт АКПП</strong> и механических КПП всех марок</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
+          <div class="srv-card"><div class="srv-num">08</div><h3>Ремонт ходовой</h3><p>Ремонт <strong>подвески</strong>: амортизаторы, рулевые, подшипники</p><div class="srv-price">от 1 000 ₽ <span class="srv-price-note">/ шт</span></div></div>
         </div>
       </div>
     </section>
@@ -952,26 +949,26 @@
       <div class="wrap">
         <div class="sec-head r">
           <div class="sec-eyebrow">В наличии и под заказ</div>
-          <div class="sec-title">Шины<span class="out"> и резина</span></div>
+          <h2 class="sec-title">Шины<span class="out"> и резина</span></h2>
           <p class="sec-sub">Большой выбор в наличии и под заказ</p>
         </div>
         <div class="tires-grid r">
           <div class="tire-card">
             <div class="tire-card-label">Легковые и внедорожники</div>
-            <div class="tire-card-title">Зимняя резина</div>
-            <p class="tire-card-desc">Шипованная и нешипованная резина на любой сезон. Большой выбор размеров в наличии</p>
+            <h3 class="tire-card-title">Зимняя резина</h3>
+            <p class="tire-card-desc">Шипованная и нешипованная <strong>резина</strong> на любой сезон. Большой выбор размеров в наличии</p>
             <div class="tire-card-price">от 1 000 ₽</div>
           </div>
           <div class="tire-card">
             <div class="tire-card-label">Фуры и грузовики</div>
-            <div class="tire-card-title">Грузовые шины</div>
-            <p class="tire-card-desc">Шины для грузовых автомобилей всех типов — рулевые, ведущие, прицепные оси</p>
+            <h3 class="tire-card-title">Грузовые шины</h3>
+            <p class="tire-card-desc"><strong>Шины для грузовых автомобилей</strong> всех типов — рулевые, ведущие, прицепные оси</p>
             <div class="tire-card-price">от 1 000 ₽</div>
           </div>
           <div class="tire-card">
             <div class="tire-card-label">CAT, Deere и другие</div>
-            <div class="tire-card-title">Шины для спецтехники</div>
-            <p class="tire-card-desc">Шины для экскаваторов, погрузчиков, тракторов и другой спецтехники под заказ</p>
+            <h3 class="tire-card-title">Шины для спецтехники</h3>
+            <p class="tire-card-desc"><strong>Шины</strong> для экскаваторов, погрузчиков, тракторов и другой <strong>спецтехники</strong> под заказ</p>
             <div class="tire-card-price">от 1 000 ₽</div>
           </div>
           <div class="tire-banner">
@@ -990,88 +987,88 @@
       <div class="wrap">
         <div class="sec-head r">
           <div class="sec-eyebrow">Наши работы</div>
-          <div class="sec-title">Фото<span class="out">галерея</span></div>
+          <h2 class="sec-title">Фото<span class="out">галерея</span></h2>
           <p class="sec-sub">Фотографии нашего оборудования, рабочих зон и инструмента — всё для качественного обслуживания вашей техники</p>
         </div>
         <div class="carousel-wrap r">
           <div class="carousel-track" id="cTrack">
-            <div class="carousel-slide" data-idx="0"><img src="1.webp" alt="Фото 1" /><div class="slide-cap"><span>Фото 1</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="1"><img src="2.webp" alt="Фото 2" /><div class="slide-cap"><span>Фото 2</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="2"><img src="3.webp" alt="Фото 3" /><div class="slide-cap"><span>Фото 3</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="3"><img src="4.webp" alt="Фото 4" /><div class="slide-cap"><span>Фото 4</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="4"><img src="5.webp" alt="Фото 5" /><div class="slide-cap"><span>Фото 5</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="5"><img src="6.webp" alt="Фото 6" /><div class="slide-cap"><span>Фото 6</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="6"><img src="7.webp" alt="Фото 7" /><div class="slide-cap"><span>Фото 7</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="7"><img src="8.webp" alt="Фото 8" /><div class="slide-cap"><span>Фото 8</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="8"><img src="9.webp" alt="Фото 9" /><div class="slide-cap"><span>Фото 9</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="9"><img src="10.webp" alt="Фото 10" /><div class="slide-cap"><span>Фото 10</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="10"><img src="11.webp" alt="Фото 11" /><div class="slide-cap"><span>Фото 11</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="11"><img src="12.webp" alt="Фото 12" /><div class="slide-cap"><span>Фото 12</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="12"><img src="13.webp" alt="Фото 13" /><div class="slide-cap"><span>Фото 13</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="13"><img src="14.webp" alt="Фото 14" /><div class="slide-cap"><span>Фото 14</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="14"><img src="15.webp" alt="Фото 15" /><div class="slide-cap"><span>Фото 15</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="15"><img src="16.webp" alt="Фото 16" /><div class="slide-cap"><span>Фото 16</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="16"><img src="17.webp" alt="Фото 17" /><div class="slide-cap"><span>Фото 17</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="17"><img src="18.webp" alt="Фото 18" /><div class="slide-cap"><span>Фото 18</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="18"><img src="19.webp" alt="Фото 19" /><div class="slide-cap"><span>Фото 19</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="19"><img src="20.webp" alt="Фото 20" /><div class="slide-cap"><span>Фото 20</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="20"><img src="21.webp" alt="Фото 21" /><div class="slide-cap"><span>Фото 21</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="21"><img src="22.webp" alt="Фото 22" /><div class="slide-cap"><span>Фото 22</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="22"><img src="23.webp" alt="Фото 23" /><div class="slide-cap"><span>Фото 23</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="23"><img src="24.webp" alt="Фото 24" /><div class="slide-cap"><span>Фото 24</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="24"><img src="25.webp" alt="Фото 25" /><div class="slide-cap"><span>Фото 25</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="25"><img src="26.webp" alt="Фото 26" /><div class="slide-cap"><span>Фото 26</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="26"><img src="27.webp" alt="Фото 27" /><div class="slide-cap"><span>Фото 27</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="27"><img src="28.webp" alt="Фото 28" /><div class="slide-cap"><span>Фото 28</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="28"><img src="29.webp" alt="Фото 29" /><div class="slide-cap"><span>Фото 29</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="29"><img src="30.webp" alt="Фото 30" /><div class="slide-cap"><span>Фото 30</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="30"><img src="31.webp" alt="Фото 31" /><div class="slide-cap"><span>Фото 31</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="31"><img src="32.webp" alt="Фото 32" /><div class="slide-cap"><span>Фото 32</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="32"><img src="33.webp" alt="Фото 33" /><div class="slide-cap"><span>Фото 33</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="33"><img src="34.webp" alt="Фото 34" /><div class="slide-cap"><span>Фото 34</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="34"><img src="35.webp" alt="Фото 35" /><div class="slide-cap"><span>Фото 35</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="35"><img src="36.webp" alt="Фото 36" /><div class="slide-cap"><span>Фото 36</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="36"><img src="37.webp" alt="Фото 37" /><div class="slide-cap"><span>Фото 37</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="37"><img src="38.webp" alt="Фото 38" /><div class="slide-cap"><span>Фото 38</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="38"><img src="39.webp" alt="Фото 39" /><div class="slide-cap"><span>Фото 39</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="39"><img src="40.webp" alt="Фото 40" /><div class="slide-cap"><span>Фото 40</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="40"><img src="41.webp" alt="Фото 41" /><div class="slide-cap"><span>Фото 41</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="41"><img src="42.webp" alt="Фото 42" /><div class="slide-cap"><span>Фото 42</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="42"><img src="43.webp" alt="Фото 43" /><div class="slide-cap"><span>Фото 43</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="43"><img src="44.webp" alt="Фото 44" /><div class="slide-cap"><span>Фото 44</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="44"><img src="45.webp" alt="Фото 45" /><div class="slide-cap"><span>Фото 45</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="45"><img src="46.webp" alt="Фото 46" /><div class="slide-cap"><span>Фото 46</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="46"><img src="47.webp" alt="Фото 47" /><div class="slide-cap"><span>Фото 47</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="47"><img src="48.webp" alt="Фото 48" /><div class="slide-cap"><span>Фото 48</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="48"><img src="49.webp" alt="Фото 49" /><div class="slide-cap"><span>Фото 49</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="49"><img src="50.webp" alt="Фото 50" /><div class="slide-cap"><span>Фото 50</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="50"><img src="51.webp" alt="Фото 51" /><div class="slide-cap"><span>Фото 51</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="51"><img src="52.webp" alt="Фото 52" /><div class="slide-cap"><span>Фото 52</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="52"><img src="53.webp" alt="Фото 53" /><div class="slide-cap"><span>Фото 53</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="53"><img src="54.webp" alt="Фото 54" /><div class="slide-cap"><span>Фото 54</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="54"><img src="55.webp" alt="Фото 55" /><div class="slide-cap"><span>Фото 55</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="55"><img src="56.webp" alt="Фото 56" /><div class="slide-cap"><span>Фото 56</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="56"><img src="57.webp" alt="Фото 57" /><div class="slide-cap"><span>Фото 57</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="57"><img src="58.webp" alt="Фото 58" /><div class="slide-cap"><span>Фото 58</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="58"><img src="59.webp" alt="Фото 59" /><div class="slide-cap"><span>Фото 59</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="59"><img src="60.webp" alt="Фото 60" /><div class="slide-cap"><span>Фото 60</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="60"><img src="61.webp" alt="Фото 61" /><div class="slide-cap"><span>Фото 61</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="61"><img src="62.webp" alt="Фото 62" /><div class="slide-cap"><span>Фото 62</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="62"><img src="63.webp" alt="Фото 63" /><div class="slide-cap"><span>Фото 63</span><span class="slide-zoom">⊕</span></div></div>
-            <div class="carousel-slide" data-idx="63"><img src="64.webp" alt="Фото 64" /><div class="slide-cap"><span>Фото 64</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="0"><img src="1.webp" alt="Ремонт спецтехники Рязань фото 1" /><div class="slide-cap"><span>Фото 1</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="1"><img src="2.webp" alt="Запчасти для грузовых авто фото 2" /><div class="slide-cap"><span>Фото 2</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="2"><img src="3.webp" alt="Автосервис спецтехника Рязань фото 3" /><div class="slide-cap"><span>Фото 3</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="3"><img src="4.webp" alt="Ремонт двигателя КАМАЗ фото 4" /><div class="slide-cap"><span>Фото 4</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="4"><img src="5.webp" alt="Диагностика автомобиля фото 5" /><div class="slide-cap"><span>Фото 5</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="5"><img src="6.webp" alt="Ремонт Caterpillar экскаватор фото 6" /><div class="slide-cap"><span>Фото 6</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="6"><img src="7.webp" alt="Автосервис Баграмово Рязань фото 7" /><div class="slide-cap"><span>Фото 7</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="7"><img src="8.webp" alt="Ремонт трансмиссии АКПП фото 8" /><div class="slide-cap"><span>Фото 8</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="8"><img src="9.webp" alt="Запчасти John Deere Рязань фото 9" /><div class="slide-cap"><span>Фото 9</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="9"><img src="10.webp" alt="Ремонт ходовой части грузовика фото 10" /><div class="slide-cap"><span>Фото 10</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="10"><img src="11.webp" alt="Шины для спецтехники фото 11" /><div class="slide-cap"><span>Фото 11</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="11"><img src="12.webp" alt="Пескоструйная очистка деталей фото 12" /><div class="slide-cap"><span>Фото 12</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="12"><img src="13.webp" alt="Ремонт кондиционера грузовика фото 13" /><div class="slide-cap"><span>Фото 13</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="13"><img src="14.webp" alt="Сервис грузовых автомобилей Рязань фото 14" /><div class="slide-cap"><span>Фото 14</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="14"><img src="15.webp" alt="Запчасти спецтехника фото 15" /><div class="slide-cap"><span>Фото 15</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="15"><img src="16.webp" alt="Ремонт погрузчика фото 16" /><div class="slide-cap"><span>Фото 16</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="16"><img src="17.webp" alt="Ремонт двигателя спецтехника фото 17" /><div class="slide-cap"><span>Фото 17</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="17"><img src="18.webp" alt="Автосервис спецтехника фото 18" /><div class="slide-cap"><span>Фото 18</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="18"><img src="19.webp" alt="Ремонт Komatsu фото 19" /><div class="slide-cap"><span>Фото 19</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="19"><img src="20.webp" alt="Грузовые шины фото 20" /><div class="slide-cap"><span>Фото 20</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="20"><img src="21.webp" alt="Ремонт топливной системы фото 21" /><div class="slide-cap"><span>Фото 21</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="21"><img src="22.webp" alt="Замена масла грузовик фото 22" /><div class="slide-cap"><span>Фото 22</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="22"><img src="23.webp" alt="Ремонт рулевого управления фото 23" /><div class="slide-cap"><span>Фото 23</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="23"><img src="24.webp" alt="Диагностика спецтехники фото 24" /><div class="slide-cap"><span>Фото 24</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="24"><img src="25.webp" alt="Ремонт гидравлики экскаватор фото 25" /><div class="slide-cap"><span>Фото 25</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="25"><img src="26.webp" alt="Запчасти КАМАЗ Рязань фото 26" /><div class="slide-cap"><span>Фото 26</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="26"><img src="27.webp" alt="Ремонт грузовика фото 27" /><div class="slide-cap"><span>Фото 27</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="27"><img src="28.webp" alt="Сервис Caterpillar фото 28" /><div class="slide-cap"><span>Фото 28</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="28"><img src="29.webp" alt="Автосервис Рязанская область фото 29" /><div class="slide-cap"><span>Фото 29</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="29"><img src="30.webp" alt="Ремонт спецтехники фото 30" /><div class="slide-cap"><span>Фото 30</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="30"><img src="31.webp" alt="Запчасти грузовой автомобиль фото 31" /><div class="slide-cap"><span>Фото 31</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="31"><img src="32.webp" alt="Ремонт ДВС фото 32" /><div class="slide-cap"><span>Фото 32</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="32"><img src="33.webp" alt="Шины для грузовиков Рязань фото 33" /><div class="slide-cap"><span>Фото 33</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="33"><img src="34.webp" alt="Ремонт КПП фото 34" /><div class="slide-cap"><span>Фото 34</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="34"><img src="35.webp" alt="Автоэлектрика грузовик фото 35" /><div class="slide-cap"><span>Фото 35</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="35"><img src="36.webp" alt="Ремонт Volvo грузовик фото 36" /><div class="slide-cap"><span>Фото 36</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="36"><img src="37.webp" alt="Запчасти Komatsu Рязань фото 37" /><div class="slide-cap"><span>Фото 37</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="37"><img src="38.webp" alt="Капремонт двигателя грузовик фото 38" /><div class="slide-cap"><span>Фото 38</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="38"><img src="39.webp" alt="Сервис грузовых авто Баграмово фото 39" /><div class="slide-cap"><span>Фото 39</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="39"><img src="40.webp" alt="Ремонт амортизаторов спецтехника фото 40" /><div class="slide-cap"><span>Фото 40</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="40"><img src="41.webp" alt="Автосервис Рыбновский район фото 41" /><div class="slide-cap"><span>Фото 41</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="41"><img src="42.webp" alt="Ремонт John Deere Рязань фото 42" /><div class="slide-cap"><span>Фото 42</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="42"><img src="43.webp" alt="Гидравлика спецтехника ремонт фото 43" /><div class="slide-cap"><span>Фото 43</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="43"><img src="44.webp" alt="Запчасти для экскаватора фото 44" /><div class="slide-cap"><span>Фото 44</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="44"><img src="45.webp" alt="Ремонт системы охлаждения фото 45" /><div class="slide-cap"><span>Фото 45</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="45"><img src="46.webp" alt="Диагностика ЭБУ грузовик фото 46" /><div class="slide-cap"><span>Фото 46</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="46"><img src="47.webp" alt="Ремонт тормозной системы фото 47" /><div class="slide-cap"><span>Фото 47</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="47"><img src="48.webp" alt="Запчасти МАЗ ЗИЛ Рязань фото 48" /><div class="slide-cap"><span>Фото 48</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="48"><img src="49.webp" alt="Ремонт спецтехники Рязань фото 49" /><div class="slide-cap"><span>Фото 49</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="49"><img src="50.webp" alt="Автосервис грузовых авто фото 50" /><div class="slide-cap"><span>Фото 50</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="50"><img src="51.webp" alt="Ремонт грузовых автомобилей фото 51" /><div class="slide-cap"><span>Фото 51</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="51"><img src="52.webp" alt="Запчасти спецтехника фото 52" /><div class="slide-cap"><span>Фото 52</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="52"><img src="53.webp" alt="Ремонт двигателя Caterpillar фото 53" /><div class="slide-cap"><span>Фото 53</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="53"><img src="54.webp" alt="Шины для спецтехники Рязань фото 54" /><div class="slide-cap"><span>Фото 54</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="54"><img src="55.webp" alt="Ремонт АКПП КПП фото 55" /><div class="slide-cap"><span>Фото 55</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="55"><img src="56.webp" alt="Замена масла спецтехника фото 56" /><div class="slide-cap"><span>Фото 56</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="56"><img src="57.webp" alt="Ремонт подвески грузовика фото 57" /><div class="slide-cap"><span>Фото 57</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="57"><img src="58.webp" alt="Сервисный центр спецтехника фото 58" /><div class="slide-cap"><span>Фото 58</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="58"><img src="59.webp" alt="Ремонт рефрижераторов фото 59" /><div class="slide-cap"><span>Фото 59</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="59"><img src="60.webp" alt="Автосервис Рязань запчасти фото 60" /><div class="slide-cap"><span>Фото 60</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="60"><img src="61.webp" alt="Ремонт спецтехники Баграмово фото 61" /><div class="slide-cap"><span>Фото 61</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="61"><img src="62.webp" alt="Ремонт погрузчика КАМАЗ фото 62" /><div class="slide-cap"><span>Фото 62</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="62"><img src="63.webp" alt="Запчасти грузовой сервис фото 63" /><div class="slide-cap"><span>Фото 63</span><span class="slide-zoom">⊕</span></div></div>
+            <div class="carousel-slide" data-idx="63"><img src="64.webp" alt="Ремонт спецтехники Рязанская область фото 64" /><div class="slide-cap"><span>Фото 64</span><span class="slide-zoom">⊕</span></div></div>
           </div>
-          <button class="c-btn c-prev" id="cPrev">&#8592;</button>
-          <button class="c-btn c-next" id="cNext">&#8594;</button>
+          <button class="c-btn c-prev" id="cPrev" aria-label="Предыдущее фото">&#8592;</button>
+          <button class="c-btn c-next" id="cNext" aria-label="Следующее фото">&#8594;</button>
         </div>
         <div class="c-dots" id="cDots"></div>
       </div>
     </section>
 
-    <div class="lb" id="lb">
-      <button class="lb-x" id="lbClose">✕</button>
-      <button class="lb-arrow lb-lft" id="lbPrev">&#8592;</button>
+    <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+      <button class="lb-x" id="lbClose" aria-label="Закрыть">✕</button>
+      <button class="lb-arrow lb-lft" id="lbPrev" aria-label="Предыдущее фото">&#8592;</button>
       <div class="lb-img-wrap"><img id="lbImg" src="" alt="" /></div>
-      <button class="lb-arrow lb-rgt" id="lbNext">&#8594;</button>
+      <button class="lb-arrow lb-rgt" id="lbNext" aria-label="Следующее фото">&#8594;</button>
       <div class="lb-info"><div class="lb-count" id="lbCount"></div></div>
     </div>
 
@@ -1080,12 +1077,12 @@
       <div class="wrap">
         <div class="contact-box r">
           <div class="ya-label">Связаться с нами</div>
-          <div class="ya-title">Напишите<br /><span class="out">нам</span></div>
-          <p class="ya-tagline">Опишите технику и проблему — ответим в течение рабочего дня. Без регистрации и лишних формальностей.</p>
+          <h2 class="ya-title">Напишите<br /><span class="out">нам</span></h2>
+          <p class="ya-tagline">Опишите технику и проблему — ответим <em>в течение рабочего дня</em>. Без регистрации и лишних формальностей.</p>
           <ul class="contact-perks">
-            <li>Подбор запчастей под любую технику</li>
+            <li><strong>Подбор запчастей</strong> под любую технику</li>
             <li>Оригинал и качественные аналоги</li>
-            <li>Ремонт любой сложности</li>
+            <li><strong>Ремонт</strong> любой сложности</li>
             <li>Оплата картой, СБП, наличными</li>
           </ul>
           <a href="https://forms.yandex.ru/ВСТАВЬТЕ_ССЫЛКУ/" target="_blank" rel="noopener noreferrer" class="ya-btn">Оставить заявку →</a>
@@ -1098,13 +1095,13 @@
       <div class="wrap">
         <div class="sec-head r">
           <div class="sec-eyebrow">Как нас найти</div>
-          <div class="sec-title">Мы на <span class="out">карте</span></div>
+          <h2 class="sec-title">Мы на <span class="out">карте</span></h2>
         </div>
         <div class="map-wrap r">
           <div class="map-info">
             <div class="map-info-item">
               <span class="map-info-lbl">Адрес</span>
-              <span class="map-info-val">Рязанская область, Рыбновский<br />муниципальный округ, д. Баграмово</span>
+              <span class="map-info-val"><strong>Рязанская область</strong>, Рыбновский<br />муниципальный округ, д. Баграмово</span>
             </div>
             <div class="map-info-item">
               <span class="map-info-lbl">Режим работы</span>
@@ -1126,13 +1123,12 @@
             </div>
           </div>
           <div class="map-frame">
-            <iframe src="https://yandex.ru/map-widget/v1/?oid=162978117583&ol=biz&z=16" allowfullscreen loading="lazy" title="АСТмашинери на карте"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?oid=162978117583&ol=biz&z=16" allowfullscreen loading="lazy" title="АвтоСпецТехникаМашинери на карте — Рязанская область, д. Баграмово"></iframe>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
       <div class="wrap">
         <div class="footer-grid">
